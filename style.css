@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  grid-template-columns: 0.5fr 11fr 0.5fr;
+}
+
+body .images {
+  display: flex;
+  grid-column: 2/3;
+}
+
+body .images .image {
+  margin-right: 15px;
+  width: 100%;
+  height: 75vh;
+  background-image: url(./images/0.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  transition: width 1s ease-in;
+  position: relative;
+  overflow: hidden;
+}
+
+body .images .image.active {
+  width: 1000%;
+  transition: width 1s ease-in;
+}
+
+body .images .image.b2 {
+  background-image: url(./images/1.jpg);
+}
+
+body .images .image.b3 {
+  background-image: url(./images/2.jpg);
+}
+
+body .images .image.b4 {
+  background-image: url(./images/3.webp);
+}
+
+body .images .image.b5 {
+  background-image: url(./images/4.jpg);
+}
+
+body .images .image h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  transform: translateX(-200px);
+  transition-property: transform;
+  transition-delay: 0s;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+}
+
+body .images .image.image.active h3 {
+  transform: translateX(0px);
+  transition-property: transform;
+  transition-delay: 0.4s;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+}
